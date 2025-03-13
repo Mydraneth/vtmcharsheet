@@ -2,11 +2,11 @@ import { defineConfig } from 'drizzle-kit'
 import env from "@/data/env/server";
 
 export default defineConfig({
-    out: "/workspaces/VtmCharSheet/src/drizzle/migrations",
-    schema: "/workspaces/VtmCharSheet/src/drizzle/schema.ts",
+    out: "./src/drizzle/migrations",
+    schema: "./src/drizzle/schema.ts",
+    dialect: "postgresql",
     strict: true,
     verbose: true,
-    dialect: "postgresql",
     dbCredentials: {
         password: env.DB_PASSWORD,
         user: env.DB_USER,

@@ -8,8 +8,8 @@ export const CharacterHealthsTable = pgTable("character_healths", {
   id,
   char_id: uuid("char_id").notNull().references(()=> CharactersTable.id, { onDelete: "cascade"}),
   max_health: integer("max_health").notNull(),
-  current_aggravated: integer("current_aggravated").notNull().default(sql`max_health`),
-  current_superficial: integer("current_superficial").notNull().default(sql`max_health`),
+  current_aggravated: integer("current_aggravated").notNull().default(0),
+  current_superficial: integer("current_superficial").notNull().default(0),
 });
 
 

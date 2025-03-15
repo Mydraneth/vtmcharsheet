@@ -53,7 +53,6 @@ export const CharactersTable = pgTable("characters", {
   sire: text("sire").notNull(),
   type: charTypeEnum("type").notNull().default("Vampire"),
   total_experience: integer("total_experience").notNull().default(0),
-  remaining_experience: integer("remaining_experience").notNull().default(sql`total_experience`),
   chronicle_tenets: text("chronicle_tenets").notNull(),
   group_id: uuid("group_id")
     .notNull()
